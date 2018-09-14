@@ -12,7 +12,7 @@ namespace flowTools {
 	
 	void ftAverageVelocity::setup(int _width, int _height, string _name) {
 		
-		averageFbo.allocate(_width, _height, GL_RGB32F);
+		averageFbo.allocate(_width, _height, GL_RGB16F);
 		floatPixelData = new float [(_width * _height) * 2];
 		
 		direction = ofVec2f(0,0);
@@ -29,7 +29,7 @@ namespace flowTools {
 	void ftAverageVelocity::setSize(int _width, int _height) {
 		if ( _width != averageFbo.getWidth() || _height != averageFbo.getHeight() ) {
 			
-			averageFbo.allocate(_width, _height, GL_RGB32F);
+			averageFbo.allocate(_width, _height, GL_RGB16F);
 			delete[] floatPixelData;
 			floatPixelData = new float [(_width * _height) * 2];
 		}

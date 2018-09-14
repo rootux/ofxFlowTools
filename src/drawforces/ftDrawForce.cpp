@@ -53,7 +53,7 @@ namespace flowTools {
 		drawType.set(type);
 		isTemporary.set(_isTemporary);
 			
-		forceBuffer.allocate(width, height, GL_RGBA32F);
+		forceBuffer.allocate(width, height, GL_RGBA16F);
 		forceBuffer.black();
 			
 		density = ofFloatColor(1,1,1,1);

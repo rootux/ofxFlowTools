@@ -76,9 +76,9 @@ namespace flowTools {
 		densityWidth = (!_densityWidth)? simulationWidth : _densityWidth;
 		densityHeight = (!_densityHeight)? simulationHeight: _densityHeight;
 		
-		int	internalFormatDensity = GL_RGBA32F;
-		int	internalFormatVelocity = GL_RGBA32F;
-		int	interformatPressure = GL_RGBA32F;
+		int	internalFormatDensity = GL_RGBA16F;
+		int	internalFormatVelocity = GL_RGBA16F;
+		int	interformatPressure = GL_RGBA16F;
 		int	internalFormatObstacle = GL_R8;
 			
 		densitySwapBuffer.allocate(densityWidth,densityHeight,internalFormatDensity);

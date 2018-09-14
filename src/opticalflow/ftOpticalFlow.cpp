@@ -60,12 +60,12 @@ namespace flowTools {
 		height = _height;
 				
 		sourceSwapBuffer.allocate(width, height);
-		velocityBuffer.allocate(width, height, GL_RGB32F);
+		velocityBuffer.allocate(width, height, GL_RGB16F);
 		velocityBuffer.black();
 		
-		velocityTexture.allocate(width, height, GL_RGB32F);
+		velocityTexture.allocate(width, height, GL_RGB16F);
 		
-		decayBuffer.allocate(width, height, GL_RGB32F);
+		decayBuffer.allocate(width, height, GL_RGB16F);
 		decayBuffer.black();
 		
 //		flowVectors = new ofVec2f[int(width * height)];

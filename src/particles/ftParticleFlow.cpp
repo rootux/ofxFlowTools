@@ -99,7 +99,7 @@ namespace flowTools {
         particleTexture.allocate(texture, false);
         particleTexture.loadData(texture);
         
-		int internalFormatVelocity = GL_RG32F;
+		int internalFormatVelocity = GL_RG16F;
 		
 		ofPushStyle();
 		ofEnableBlendMode(OF_BLENDMODE_DISABLED);  // Why?
@@ -107,7 +107,7 @@ namespace flowTools {
 		
 		particleAgeLifespanMassSizeSwapBuffer.allocate(numParticlesX, numParticlesY, GL_RGBA32F, GL_NEAREST);
 		particleAgeLifespanMassSizeSwapBuffer.black();
-		particlePositionSwapBuffer.allocate(numParticlesX, numParticlesY, GL_RGB32F, GL_NEAREST);
+		particlePositionSwapBuffer.allocate(numParticlesX, numParticlesY, GL_RGB16F, GL_NEAREST);
 		particlePositionSwapBuffer.black();
 		initPositionShader.update(*particlePositionSwapBuffer.getBuffer());
 		particlePositionSwapBuffer.swap();
@@ -119,7 +119,7 @@ namespace flowTools {
 		fluidVelocitySwapBuffer.black();
 		flowVelocitySwapBuffer.allocate(simulationWidth, simulationHeight, internalFormatVelocity);
 		flowVelocitySwapBuffer.black();
-		densitySwapBuffer.allocate(simulationWidth, simulationHeight, GL_RGBA32F);
+		densitySwapBuffer.allocate(simulationWidth, simulationHeight, GL_RGBA16F);
 		densitySwapBuffer.black();
 		obstacleBuffer.allocate(simulationWidth, simulationHeight, GL_R8); // GL_RED??
 		obstacleBuffer.black();

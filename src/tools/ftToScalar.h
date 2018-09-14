@@ -12,7 +12,7 @@ namespace flowTools {
 		void	allocate(int _width, int _height){
 			width = _width;
 			height = _height;
-			ScalarBuffer.allocate(width, height, GL_RGB32F);
+			ScalarBuffer.allocate(width, height, GL_RGB16F);
 			parameters.setName("to scalar");
 			parameters.add(scale.set("scale", 1, 0.5, 10));
 		};
